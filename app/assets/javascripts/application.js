@@ -44,6 +44,19 @@ $(document).ready(function () {
       }
     ]
   };
-  // Write come code to add the dogs to the table !!!!
+
+    var dogs = gschoolDogs["dogs"]
+    for (var each in dogs) {
+      var owner = dogs[each].owner;
+      var name = dogs[each].name;
+      var food = dogs[each].preferences[0].favoriteFood;
+      var toy = dogs[each].preferences[1].favoriteToy;
+      var details = "<tr><<td>" + owner + "</td>" + "<td>" + name + "</td>" + "<td>" + food+ "</td>" + "<td>" + toy+ "</td></tr>"
+      $('.dogs').append(details)
+
+    }
+
+
+
 });
 
